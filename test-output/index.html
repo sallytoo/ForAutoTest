@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 9 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Suite">
+              <span class="suite-name border-failed">Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Suite">
+                    <span>D:\workspace\phoenix_api_atuo_8\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Suite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Suite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">28 methods, 9 failed,   19 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(28, 10, {&quot;id&quot;:&quot;1&quot;}, {&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:[{&quot;id&quot;:null,&quot;investId&quot;:&quot;1&quot;,&quot;createTime&quot;:&quot;2018-...)">f(28, 10, {"id":"1"}, {"status":1,"code":"10001","data":[{"id":null,"investId":"1","createTime":"2018-...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(19, 4, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;amount&quot;:&quot;10000&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20119&quot;,&quot;data&quot;:null,&quot;msg&quot;:...)">f(19, 4, {"mobilephone":"13999999999","amount":"10000"}, {"status":0,"code":"20119","data":null,"msg":...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(10, 2, {&quot;mobilephone&quot;:&quot;13517315569&quot;,&quot;pwd&quot;:&quot;123456&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20111&quot;,data:null,&quot;msg&quot;:&quot;用户名...)">f(10, 2, {"mobilephone":"13517315569","pwd":"123456"}, {"status":0,"code":"20111",data:null,"msg":"用户名...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(14, 3, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;amount&quot;:&quot;100&quot;}, {&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:{&quot;id&quot;:80,&quot;reg...)">f(14, 3, {"mobilephone":"13999999999","amount":"100"}, {"status":1,"code":"10001","data":{"id":80,"reg...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(21, 4, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;amount&quot;:&quot;100&quot;}, {&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;提...)">f(21, 4, {"mobilephone":"13999999999","amount":"100"}, {"status":1,"code":"10001","data":null,"msg":"提...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(11, 2, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;pwd&quot;:&quot;1234567&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20111&quot;,data:null,&quot;msg&quot;:&quot;用户...)">f(11, 2, {"mobilephone":"13999999999","pwd":"1234567"}, {"status":0,"code":"20111",data:null,"msg":"用户...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(20, 4, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;amount&quot;:&quot;0&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20117&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;请输入...)">f(20, 4, {"mobilephone":"13999999999","amount":"0"}, {"status":0,"code":"20117","data":null,"msg":"请输入...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(1, 1, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;pwd&quot;:&quot;123456&quot;,&quot;regname&quot;:&quot;aabbcc&quot;}, {&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;d...)">f(1, 1, {"mobilephone":"13999999999","pwd":"123456","regname":"aabbcc"}, {"status":1,"code":"10001","d...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(9, 2, {&quot;mobilephone&quot;:&quot;&quot;,&quot;pwd&quot;:&quot;123456&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20103&quot;,data:null,&quot;msg&quot;:&quot;手机号不能为空&quot;}, , )">f(9, 2, {"mobilephone":"","pwd":"123456"}, {"status":0,"code":"20103",data:null,"msg":"手机号不能为空"}, , )</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(4, 1, {&quot;mobilephone&quot;:&quot;&quot;,&quot;pwd&quot;:&quot;&quot;,&quot;regname&quot;:&quot;柠檬班&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20103&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;手机号...)">f(4, 1, {"mobilephone":"","pwd":"","regname":"柠檬班"}, {"status":0,"code":"20103","data":null,"msg":"手机号...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(17, 4, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;amount&quot;:&quot;-100&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20117&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;...)">f(17, 4, {"mobilephone":"13999999999","amount":"-100"}, {"status":0,"code":"20117","data":null,"msg":"...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(23, 8, {&quot;id&quot;:&quot;1&quot;,&quot;status&quot;:&quot;4&quot;}, {&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;更新状态成功：竞标开始，当前标为竞标中状态&quot;...)">f(23, 8, {"id":"1","status":"4"}, {"status":1,"code":"10001","data":null,"msg":"更新状态成功：竞标开始，当前标为竞标中状态"...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(22, 7, {&quot;memberId&quot;:&quot;1&quot;,&quot;title&quot;:&quot;测试新增项目&quot;,&quot;loanRate&quot;:&quot;12&quot;,&quot;loanTerm&quot;:&quot;3&quot;,&quot;loanDateType&quot;:&quot;2&quot;,&quot;repaymemt...)">f(22, 7, {"memberId":"1","title":"测试新增项目","loanRate":"12","loanTerm":"3","loanDateType":"2","repaymemt...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(3, 1, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;pwd&quot;:&quot;&quot;,&quot;regname&quot;:&quot;柠檬班&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20103&quot;,&quot;data&quot;:null...)">f(3, 1, {"mobilephone":"13999999999","pwd":"","regname":"柠檬班"}, {"status":0,"code":"20103","data":null...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(8, 2, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;pwd&quot;:&quot;&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20103&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;密码不能为空&quot;}...)">f(8, 2, {"mobilephone":"13999999999","pwd":""}, {"status":0,"code":"20103","data":null,"msg":"密码不能为空"}...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(24, 6, {&quot;memberId&quot;:&quot;1&quot;,&quot;password&quot;:&quot;123456&quot;,&quot;loanId&quot;:&quot;1&quot;,&quot;amount&quot;:&quot;100&quot;}, {&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,...)">f(24, 6, {"memberId":"1","password":"123456","loanId":"1","amount":"100"}, {"status":1,"code":"10001",...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(25, 6, {&quot;memberId&quot;:&quot;1&quot;,&quot;password&quot;:&quot;123456&quot;,&quot;loanId&quot;:&quot;10000&quot;,&quot;amount&quot;:&quot;100000&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;...)">f(25, 6, {"memberId":"1","password":"123456","loanId":"10000","amount":"100000"}, {"status":0,"code":"...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(2, 1, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;pwd&quot;:&quot;123456&quot;,&quot;regname&quot;:&quot;柠檬班&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20110&quot;,&quot;data...)">f(2, 1, {"mobilephone":"13999999999","pwd":"123456","regname":"柠檬班"}, {"status":0,"code":"20110","data...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(5, 1, {&quot;mobilephone&quot;:&quot;135&quot;,&quot;pwd&quot;:&quot;123456&quot;,&quot;regname&quot;:&quot;柠檬班&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20109&quot;,&quot;data&quot;:null,&quot;...)">f(5, 1, {"mobilephone":"135","pwd":"123456","regname":"柠檬班"}, {"status":0,"code":"20109","data":null,"...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(7, 2, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;pwd&quot;:&quot;123456&quot;}, {&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;登录...)">f(7, 2, {"mobilephone":"13999999999","pwd":"123456"}, {"status":1,"code":"10001","data":null,"msg":"登录...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(27, 8, {&quot;id&quot;:&quot;1&quot;,&quot;status&quot;:&quot;5&quot;}, {&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;更新状态成功：当前标为核保审批状态&quot;}, ,...)">f(27, 8, {"id":"1","status":"5"}, {"status":1,"code":"10001","data":null,"msg":"更新状态成功：当前标为核保审批状态"}, ,...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(13, 3, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;amount&quot;:&quot;-100&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20117&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;...)">f(13, 3, {"mobilephone":"13999999999","amount":"-100"}, {"status":0,"code":"20117","data":null,"msg":"...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(16, 3, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;amount&quot;:&quot;abc&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20118&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;请...)">f(16, 3, {"mobilephone":"13999999999","amount":"abc"}, {"status":0,"code":"20118","data":null,"msg":"请...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(26, 10, {&quot;id&quot;:&quot;1&quot;}, {&quot;status&quot;:1,&quot;code&quot;:&quot;20405&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;该项目不在核保审批或终审状态，无法生成回款计划！&quot;}, , [{&quot;n...)">f(26, 10, {"id":"1"}, {"status":1,"code":"20405","data":null,"msg":"该项目不在核保审批或终审状态，无法生成回款计划！"}, , [{"n...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(18, 4, {&quot;mobilephone&quot;:&quot;1388888000&quot;,&quot;amount&quot;:&quot;100&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20109&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;手机...)">f(18, 4, {"mobilephone":"1388888000","amount":"100"}, {"status":0,"code":"20109","data":null,"msg":"手机...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(6, 1, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;pwd&quot;:&quot;123&quot;,&quot;regname&quot;:&quot;柠檬班&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20108&quot;,&quot;data&quot;:n...)">f(6, 1, {"mobilephone":"13999999999","pwd":"123","regname":"柠檬班"}, {"status":0,"code":"20108","data":n...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(12, 3, {&quot;mobilephone&quot;:&quot;13888880002&quot;,&quot;amount&quot;:&quot;100&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20104&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;此...)">f(12, 3, {"mobilephone":"13888880002","amount":"100"}, {"status":0,"code":"20104","data":null,"msg":"此...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(15, 3, {&quot;mobilephone&quot;:&quot;138888&quot;,&quot;amount&quot;:&quot;100&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20109&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;手机号码格式...)">f(15, 3, {"mobilephone":"138888","amount":"100"}, {"status":0,"code":"20109","data":null,"msg":"手机号码格式...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.lemon.api.auto.testCase.AllTestCase</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(28, 10, {&quot;id&quot;:&quot;1&quot;}, {&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:[{&quot;id&quot;:null,&quot;investId&quot;:&quot;1&quot;,&quot;createTime&quot;:&quot;2018-...)">
+                  </a> <!-- f(28, 10, {"id":"1"}, {"status":1,"code":"10001","data":[{"id":null,"investId":"1","createTime":"2018-...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(28, 10, {"id":"1"}, {"status":1,"code":"10001","data":[{"id":null,"investId":"1","createTime":"2018-04-27 12:24:01","terms":"1","unfinishedInterest":"1.0","unfinishedPrincipal":"0","repaymentDate":"2018-05-27 12:24:01","actualRepaymentDate":null,"status":"0"},{"id":null,"investId":"1","createTime":"2018-04-27 12:24:01","terms":"2","unfinishedInterest":"1.0","unfinishedPrincipal":"0","repaymentDate":"2018-06-27 12:24:01","actualRepaymentDate":null,"status":"0"},{"id":null,"investId":"1","createTime":"2018-04-27 12:24:01","terms":"3","unfinishedInterest":"1.0","unfinishedPrincipal":"100.00","repaymentDate":"2018-07-27 12:24:01","actualRepaymentDate":null,"status":"0"}],"msg":"生成回款计划成功"}, [{"no":"1","sql":"select count(1) as totalNum from repayment where InvestId=1","expectedResult":[{"totalNum":"0"}]}], [{"no":"1","sql":"select count(1) as totalNum from repayment where InvestId=1","expectedResult":[{"totalNum":"3"}]},{"no":"2","sql":"select Terms,UnfinishedInterest,UnfinishedPrincipal,`Status` from repayment where InvestId=1","expectedResult":[{"Terms":"1","UnfinishedInterest":"1.00","UnfinishedPrincipal":"0.00","Status":"0"},{"Terms":"2","UnfinishedInterest":"1.00","UnfinishedPrincipal":"0.00","Status":"0"},{"Terms":"3","UnfinishedInterest":"1.00","UnfinishedPrincipal":"100.00","Status":"0"}]}])</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [{&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:[{&quot;id&quot;:null,&quot;investId&quot;:&quot;1&quot;,&quot;createTime&quot;:&quot;2018-04-27 12:24:01&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2018-05-27 12:24:01&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;1&quot;,&quot;createTime&quot;:&quot;2018-04-27 12:24:01&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2018-06-27 12:24:01&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;1&quot;,&quot;createTime&quot;:&quot;2018-04-27 12:24:01&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2018-07-27 12:24:01&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;}],&quot;msg&quot;:&quot;生成回款计划成功&quot;}] but found [{&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:[{&quot;id&quot;:null,&quot;investId&quot;:&quot;16&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;16&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;16&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;15&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;15&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;15&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;14&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;14&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;14&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;13&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;13&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;13&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;12&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;12&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;12&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;11&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;11&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;11&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;10&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;10&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;10&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;9&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;9&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;9&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;8&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;8&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;8&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;7&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;7&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;7&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;6&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;6&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;6&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;5&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;5&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;5&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;4&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;4&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;4&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;3&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;3&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;3&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;2&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;2&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;2&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;1&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;1&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;1&quot;,&quot;createTime&quot;:&quot;2018-12-15 16:08:21&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-15 16:08:21&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;}],&quot;msg&quot;:&quot;生成回款计划成功&quot;}]
+	at com.lemon.api.auto.testCase.AllTestCase.f(AllTestCase.java:125)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(19, 4, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;amount&quot;:&quot;10000&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20119&quot;,&quot;data&quot;:null,&quot;msg&quot;:...)">
+                  </a> <!-- f(19, 4, {"mobilephone":"13999999999","amount":"10000"}, {"status":0,"code":"20119","data":null,"msg":...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(19, 4, {"mobilephone":"13999999999","amount":"10000"}, {"status":0,"code":"20119","data":null,"msg":"余额不足，请修改提现额度"}, , )</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [{&quot;status&quot;:0,&quot;code&quot;:&quot;20119&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;余额不足，请修改提现额度&quot;}] but found [{&quot;status&quot;:1,&quot;code&quot;:&quot;20119&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;余额不足，请修改提现额度&quot;}]
+	at com.lemon.api.auto.testCase.AllTestCase.f(AllTestCase.java:125)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(10, 2, {&quot;mobilephone&quot;:&quot;13517315569&quot;,&quot;pwd&quot;:&quot;123456&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20111&quot;,data:null,&quot;msg&quot;:&quot;用户名...)">
+                  </a> <!-- f(10, 2, {"mobilephone":"13517315569","pwd":"123456"}, {"status":0,"code":"20111",data:null,"msg":"用户名...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(10, 2, {"mobilephone":"13517315569","pwd":"123456"}, {"status":0,"code":"20111",data:null,"msg":"用户名或密码错误"}, , )</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [{&quot;status&quot;:0,&quot;code&quot;:&quot;20111&quot;,data:null,&quot;msg&quot;:&quot;用户名或密码错误&quot;}] but found [{&quot;status&quot;:0,&quot;code&quot;:&quot;20111&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;用户名或密码错误&quot;}]
+	at com.lemon.api.auto.testCase.AllTestCase.f(AllTestCase.java:125)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(14, 3, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;amount&quot;:&quot;100&quot;}, {&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:{&quot;id&quot;:80,&quot;reg...)">
+                  </a> <!-- f(14, 3, {"mobilephone":"13999999999","amount":"100"}, {"status":1,"code":"10001","data":{"id":80,"reg...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(14, 3, {"mobilephone":"13999999999","amount":"100"}, {"status":1,"code":"10001","data":{"id":80,"regname":"tom","pwd":"E10ADC3949BA59ABBE56E057F20F883E","mobilephone":"13999999999","leaveamount":"10000.00","type":"1","regtime":"2018-04-26 14:42:36.0"},"msg":"充值成功"}, [{"no":"1","sql":"select LeaveAmount from member where MobilePhone='13999999999'","expectedResult":[{"LeaveAmount":"0.00"}]}], [{"no":"1","sql":"select LeaveAmount from member where MobilePhone='13999999999'","expectedResult":[{"LeaveAmount":"10000.00"}]}])</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [{&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:{&quot;id&quot;:80,&quot;regname&quot;:&quot;tom&quot;,&quot;pwd&quot;:&quot;E10ADC3949BA59ABBE56E057F20F883E&quot;,&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;leaveamount&quot;:&quot;10000.00&quot;,&quot;type&quot;:&quot;1&quot;,&quot;regtime&quot;:&quot;2018-04-26 14:42:36.0&quot;},&quot;msg&quot;:&quot;充值成功&quot;}] but found [{&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:{&quot;id&quot;:1,&quot;regname&quot;:&quot;aabbcc&quot;,&quot;pwd&quot;:&quot;E10ADC3949BA59ABBE56E057F20F883E&quot;,&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;leaveamount&quot;:&quot;-800.00&quot;,&quot;type&quot;:&quot;1&quot;,&quot;regtime&quot;:&quot;2018-12-11 22:55:41.0&quot;},&quot;msg&quot;:&quot;充值成功&quot;}]
+	at com.lemon.api.auto.testCase.AllTestCase.f(AllTestCase.java:125)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(21, 4, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;amount&quot;:&quot;100&quot;}, {&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;提...)">
+                  </a> <!-- f(21, 4, {"mobilephone":"13999999999","amount":"100"}, {"status":1,"code":"10001","data":null,"msg":"提...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(21, 4, {"mobilephone":"13999999999","amount":"100"}, {"status":1,"code":"10001","data":null,"msg":"提现成功"}, , )</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [{&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;提现成功&quot;}] but found [{&quot;status&quot;:1,&quot;code&quot;:&quot;20119&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;余额不足，请修改提现额度&quot;}]
+	at com.lemon.api.auto.testCase.AllTestCase.f(AllTestCase.java:125)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(11, 2, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;pwd&quot;:&quot;1234567&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20111&quot;,data:null,&quot;msg&quot;:&quot;用户...)">
+                  </a> <!-- f(11, 2, {"mobilephone":"13999999999","pwd":"1234567"}, {"status":0,"code":"20111",data:null,"msg":"用户...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(11, 2, {"mobilephone":"13999999999","pwd":"1234567"}, {"status":0,"code":"20111",data:null,"msg":"用户名或密码错误"}, , )</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [{&quot;status&quot;:0,&quot;code&quot;:&quot;20111&quot;,data:null,&quot;msg&quot;:&quot;用户名或密码错误&quot;}] but found [{&quot;status&quot;:0,&quot;code&quot;:&quot;20111&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;用户名或密码错误&quot;}]
+	at com.lemon.api.auto.testCase.AllTestCase.f(AllTestCase.java:125)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(20, 4, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;amount&quot;:&quot;0&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20117&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;请输入...)">
+                  </a> <!-- f(20, 4, {"mobilephone":"13999999999","amount":"0"}, {"status":0,"code":"20117","data":null,"msg":"请输入...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(20, 4, {"mobilephone":"13999999999","amount":"0"}, {"status":0,"code":"20117","data":null,"msg":"请输入范围在0到50万之间的正数金额"}, , )</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [{&quot;status&quot;:0,&quot;code&quot;:&quot;20117&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;请输入范围在0到50万之间的正数金额&quot;}] but found [{&quot;status&quot;:1,&quot;code&quot;:&quot;20119&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;余额不足，请修改提现额度&quot;}]
+	at com.lemon.api.auto.testCase.AllTestCase.f(AllTestCase.java:125)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(1, 1, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;pwd&quot;:&quot;123456&quot;,&quot;regname&quot;:&quot;aabbcc&quot;}, {&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;d...)">
+                  </a> <!-- f(1, 1, {"mobilephone":"13999999999","pwd":"123456","regname":"aabbcc"}, {"status":1,"code":"10001","d...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(1, 1, {"mobilephone":"13999999999","pwd":"123456","regname":"aabbcc"}, {"status":1,"code":"10001","data":null,"msg":"注册成功"}, [{"no":"1","sql":"select count(*) as totalNum from member where mobilephone='13999999999'","expectedResultList":[{"totalNum":"0"}]}], [{"no":"1","sql":"select count(*) as totalNum from member where mobilephone='13999999999'","expectedResultList":[{"totalNum":"1"}]},{"no":"2","sql":"select LeaveAmount,Type from member where mobilephone='13999999999'","expectedResultList":[{"LeaveAmount":"0.00","Type":"1"}]}])</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [{&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;注册成功&quot;}] but found [{&quot;status&quot;:0,&quot;code&quot;:&quot;20110&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;手机号码已被注册&quot;}]
+	at com.lemon.api.auto.testCase.AllTestCase.f(AllTestCase.java:125)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(9, 2, {&quot;mobilephone&quot;:&quot;&quot;,&quot;pwd&quot;:&quot;123456&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20103&quot;,data:null,&quot;msg&quot;:&quot;手机号不能为空&quot;}, , )">
+                  </a> <!-- f(9, 2, {"mobilephone":"","pwd":"123456"}, {"status":0,"code":"20103",data:null,"msg":"手机号不能为空"}, , ) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(9, 2, {"mobilephone":"","pwd":"123456"}, {"status":0,"code":"20103",data:null,"msg":"手机号不能为空"}, , )</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [{&quot;status&quot;:0,&quot;code&quot;:&quot;20103&quot;,data:null,&quot;msg&quot;:&quot;手机号不能为空&quot;}] but found [{&quot;status&quot;:0,&quot;code&quot;:&quot;20103&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;手机号不能为空&quot;}]
+	at com.lemon.api.auto.testCase.AllTestCase.f(AllTestCase.java:125)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.lemon.api.auto.testCase.AllTestCase</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(4, 1, {&quot;mobilephone&quot;:&quot;&quot;,&quot;pwd&quot;:&quot;&quot;,&quot;regname&quot;:&quot;柠檬班&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20103&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;手机号...)">
+                  </a> <!-- f(4, 1, {"mobilephone":"","pwd":"","regname":"柠檬班"}, {"status":0,"code":"20103","data":null,"msg":"手机号...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(4, 1, {"mobilephone":"","pwd":"","regname":"柠檬班"}, {"status":0,"code":"20103","data":null,"msg":"手机号不能为空"}, , )</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(17, 4, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;amount&quot;:&quot;-100&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20117&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;...)">
+                  </a> <!-- f(17, 4, {"mobilephone":"13999999999","amount":"-100"}, {"status":0,"code":"20117","data":null,"msg":"...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(17, 4, {"mobilephone":"13999999999","amount":"-100"}, {"status":0,"code":"20117","data":null,"msg":"请输入范围在0到50万之间的正数金额"}, , )</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(23, 8, {&quot;id&quot;:&quot;1&quot;,&quot;status&quot;:&quot;4&quot;}, {&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;更新状态成功：竞标开始，当前标为竞标中状态&quot;...)">
+                  </a> <!-- f(23, 8, {"id":"1","status":"4"}, {"status":1,"code":"10001","data":null,"msg":"更新状态成功：竞标开始，当前标为竞标中状态"...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(23, 8, {"id":"1","status":"4"}, {"status":1,"code":"10001","data":null,"msg":"更新状态成功：竞标开始，当前标为竞标中状态"}, , [{"no":"1","sql":"select `Status` from loan where Id=1","expectedResult":[{"Status":"4"}]}])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(22, 7, {&quot;memberId&quot;:&quot;1&quot;,&quot;title&quot;:&quot;测试新增项目&quot;,&quot;loanRate&quot;:&quot;12&quot;,&quot;loanTerm&quot;:&quot;3&quot;,&quot;loanDateType&quot;:&quot;2&quot;,&quot;repaymemt...)">
+                  </a> <!-- f(22, 7, {"memberId":"1","title":"测试新增项目","loanRate":"12","loanTerm":"3","loanDateType":"2","repaymemt...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(22, 7, {"memberId":"1","title":"测试新增项目","loanRate":"12","loanTerm":"3","loanDateType":"2","repaymemtWay":"11","biddingDays":"5","amount":"100000"}, {"status":1,"code":"10001","data":null,"msg":"加标成功"}, , )</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(3, 1, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;pwd&quot;:&quot;&quot;,&quot;regname&quot;:&quot;柠檬班&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20103&quot;,&quot;data&quot;:null...)">
+                  </a> <!-- f(3, 1, {"mobilephone":"13999999999","pwd":"","regname":"柠檬班"}, {"status":0,"code":"20103","data":null...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(3, 1, {"mobilephone":"13999999999","pwd":"","regname":"柠檬班"}, {"status":0,"code":"20103","data":null,"msg":"密码不能为空"}, , )</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(8, 2, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;pwd&quot;:&quot;&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20103&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;密码不能为空&quot;}...)">
+                  </a> <!-- f(8, 2, {"mobilephone":"13999999999","pwd":""}, {"status":0,"code":"20103","data":null,"msg":"密码不能为空"}...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(8, 2, {"mobilephone":"13999999999","pwd":""}, {"status":0,"code":"20103","data":null,"msg":"密码不能为空"}, , )</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(24, 6, {&quot;memberId&quot;:&quot;1&quot;,&quot;password&quot;:&quot;123456&quot;,&quot;loanId&quot;:&quot;1&quot;,&quot;amount&quot;:&quot;100&quot;}, {&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,...)">
+                  </a> <!-- f(24, 6, {"memberId":"1","password":"123456","loanId":"1","amount":"100"}, {"status":1,"code":"10001",...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(24, 6, {"memberId":"1","password":"123456","loanId":"1","amount":"100"}, {"status":1,"code":"10001","data":null,"msg":"竞标成功"}, , [{"no":"1","sql":"select MemberID,LoanId,Amount,IsValid from invest order by id desc limit 1","expectedResult":[{"MemberID":"1","LoanId":"1","Amount":"100.00","IsValid":"1"}]},{"no":"2","sql":"select LeaveAmount from member where MobilePhone='13999999999'","expectedResult":[{"LeaveAmount":"9900.00"}]}])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(25, 6, {&quot;memberId&quot;:&quot;1&quot;,&quot;password&quot;:&quot;123456&quot;,&quot;loanId&quot;:&quot;10000&quot;,&quot;amount&quot;:&quot;100000&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;...)">
+                  </a> <!-- f(25, 6, {"memberId":"1","password":"123456","loanId":"10000","amount":"100000"}, {"status":0,"code":"...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(25, 6, {"memberId":"1","password":"123456","loanId":"10000","amount":"100000"}, {"status":0,"code":"11009","data":null,"msg":"不存在该标的"}, , [{"no":"1","sql":"select count(1) as loanNum from loan where id=10000","expectedResult":[{"loanNum":"0"}]}])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(2, 1, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;pwd&quot;:&quot;123456&quot;,&quot;regname&quot;:&quot;柠檬班&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20110&quot;,&quot;data...)">
+                  </a> <!-- f(2, 1, {"mobilephone":"13999999999","pwd":"123456","regname":"柠檬班"}, {"status":0,"code":"20110","data...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(2, 1, {"mobilephone":"13999999999","pwd":"123456","regname":"柠檬班"}, {"status":0,"code":"20110","data":null,"msg":"手机号码已被注册"}, [{"no":"1","sql":"select count(*) as totalNum from member where mobilephone='13999999999'","expectedResultList":[{"totalNum":"1"}]}], )</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(5, 1, {&quot;mobilephone&quot;:&quot;135&quot;,&quot;pwd&quot;:&quot;123456&quot;,&quot;regname&quot;:&quot;柠檬班&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20109&quot;,&quot;data&quot;:null,&quot;...)">
+                  </a> <!-- f(5, 1, {"mobilephone":"135","pwd":"123456","regname":"柠檬班"}, {"status":0,"code":"20109","data":null,"...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(5, 1, {"mobilephone":"135","pwd":"123456","regname":"柠檬班"}, {"status":0,"code":"20109","data":null,"msg":"手机号码格式不正确"}, , )</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(7, 2, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;pwd&quot;:&quot;123456&quot;}, {&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;登录...)">
+                  </a> <!-- f(7, 2, {"mobilephone":"13999999999","pwd":"123456"}, {"status":1,"code":"10001","data":null,"msg":"登录...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(7, 2, {"mobilephone":"13999999999","pwd":"123456"}, {"status":1,"code":"10001","data":null,"msg":"登录成功"}, , )</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(27, 8, {&quot;id&quot;:&quot;1&quot;,&quot;status&quot;:&quot;5&quot;}, {&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;更新状态成功：当前标为核保审批状态&quot;}, ,...)">
+                  </a> <!-- f(27, 8, {"id":"1","status":"5"}, {"status":1,"code":"10001","data":null,"msg":"更新状态成功：当前标为核保审批状态"}, ,...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(27, 8, {"id":"1","status":"5"}, {"status":1,"code":"10001","data":null,"msg":"更新状态成功：当前标为核保审批状态"}, , [{"no":"1","sql":"select `Status` from loan where Id=1","expectedResult":[{"Status":"5"}]}])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(13, 3, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;amount&quot;:&quot;-100&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20117&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;...)">
+                  </a> <!-- f(13, 3, {"mobilephone":"13999999999","amount":"-100"}, {"status":0,"code":"20117","data":null,"msg":"...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(13, 3, {"mobilephone":"13999999999","amount":"-100"}, {"status":0,"code":"20117","data":null,"msg":"请输入范围在0到50万之间的正数金额"}, , )</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(16, 3, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;amount&quot;:&quot;abc&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20118&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;请...)">
+                  </a> <!-- f(16, 3, {"mobilephone":"13999999999","amount":"abc"}, {"status":0,"code":"20118","data":null,"msg":"请...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(16, 3, {"mobilephone":"13999999999","amount":"abc"}, {"status":0,"code":"20118","data":null,"msg":"请输入数字"}, , )</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(26, 10, {&quot;id&quot;:&quot;1&quot;}, {&quot;status&quot;:1,&quot;code&quot;:&quot;20405&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;该项目不在核保审批或终审状态，无法生成回款计划！&quot;}, , [{&quot;n...)">
+                  </a> <!-- f(26, 10, {"id":"1"}, {"status":1,"code":"20405","data":null,"msg":"该项目不在核保审批或终审状态，无法生成回款计划！"}, , [{"n...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(26, 10, {"id":"1"}, {"status":1,"code":"20405","data":null,"msg":"该项目不在核保审批或终审状态，无法生成回款计划！"}, , [{"no":"1","sql":"select count(1) as loanNum from loan where id=1 and `Status`=5","expectedResult":[{"loanNum":"0"}]}])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(18, 4, {&quot;mobilephone&quot;:&quot;1388888000&quot;,&quot;amount&quot;:&quot;100&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20109&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;手机...)">
+                  </a> <!-- f(18, 4, {"mobilephone":"1388888000","amount":"100"}, {"status":0,"code":"20109","data":null,"msg":"手机...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(18, 4, {"mobilephone":"1388888000","amount":"100"}, {"status":0,"code":"20109","data":null,"msg":"手机号码格式不正确"}, , )</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(6, 1, {&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;pwd&quot;:&quot;123&quot;,&quot;regname&quot;:&quot;柠檬班&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20108&quot;,&quot;data&quot;:n...)">
+                  </a> <!-- f(6, 1, {"mobilephone":"13999999999","pwd":"123","regname":"柠檬班"}, {"status":0,"code":"20108","data":n...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(6, 1, {"mobilephone":"13999999999","pwd":"123","regname":"柠檬班"}, {"status":0,"code":"20108","data":null,"msg":"密码长度必须为6~18"}, , )</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(12, 3, {&quot;mobilephone&quot;:&quot;13888880002&quot;,&quot;amount&quot;:&quot;100&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20104&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;此...)">
+                  </a> <!-- f(12, 3, {"mobilephone":"13888880002","amount":"100"}, {"status":0,"code":"20104","data":null,"msg":"此...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(12, 3, {"mobilephone":"13888880002","amount":"100"}, {"status":0,"code":"20104","data":null,"msg":"此手机号对应的会员不存在"}, , )</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(15, 3, {&quot;mobilephone&quot;:&quot;138888&quot;,&quot;amount&quot;:&quot;100&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20109&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;手机号码格式...)">
+                  </a> <!-- f(15, 3, {"mobilephone":"138888","amount":"100"}, {"status":0,"code":"20109","data":null,"msg":"手机号码格式...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(15, 3, {"mobilephone":"138888","amount":"100"}, {"status":0,"code":"20109","data":null,"msg":"手机号码格式不正确"}, , )</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+        </div> <!-- panel Suite -->
+        <div panel-name="test-xml-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">D:\workspace\phoenix_api_atuo_8\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Suite&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;org.uncommons.reportng.HTMLReporter&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test name=&quot;lemon api auto testng&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.lemon.api.auto.testCase.AllTestCase&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- lemon api auto testng --&gt;
+&lt;/suite&gt; &lt;!-- Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">lemon api auto testng (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Suite');
+function tableData_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(28);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'f')
+data.setCell(0, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(0, 3, 2595);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'f')
+data.setCell(1, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(1, 3, 305);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'f')
+data.setCell(2, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(2, 3, 270);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'f')
+data.setCell(3, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(3, 3, 225);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'f')
+data.setCell(4, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(4, 3, 152);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'f')
+data.setCell(5, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(5, 3, 128);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'f')
+data.setCell(6, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(6, 3, 115);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'f')
+data.setCell(7, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(7, 3, 114);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'f')
+data.setCell(8, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(8, 3, 114);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'f')
+data.setCell(9, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(9, 3, 42);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'f')
+data.setCell(10, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(10, 3, 38);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'f')
+data.setCell(11, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(11, 3, 35);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'f')
+data.setCell(12, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(12, 3, 34);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'f')
+data.setCell(13, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(13, 3, 33);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'f')
+data.setCell(14, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(14, 3, 32);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'f')
+data.setCell(15, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(15, 3, 32);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'f')
+data.setCell(16, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(16, 3, 29);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'f')
+data.setCell(17, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(17, 3, 29);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'f')
+data.setCell(18, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(18, 3, 28);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'f')
+data.setCell(19, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(19, 3, 27);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'f')
+data.setCell(20, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(20, 3, 26);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'f')
+data.setCell(21, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(21, 3, 26);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'f')
+data.setCell(22, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(22, 3, 26);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'f')
+data.setCell(23, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(23, 3, 26);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'f')
+data.setCell(24, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(24, 3, 25);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'f')
+data.setCell(25, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(25, 3, 23);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'f')
+data.setCell(26, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(26, 3, 23);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'f')
+data.setCell(27, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(27, 3, 22);
+window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <div id="times-div-Suite">
+              </div> <!-- times-div-Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.lemon.api.auto.testCase.AllTestCase</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">beforeSuite</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">f(1, 1, {"mobilephone":"13999999999","pwd":"123456","regname":"aabbcc"}, {"status":1,"code":"10001","d...)</span>
+                <span class="method-start">573 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(2, 1, {"mobilephone":"13999999999","pwd":"123456","regname":"柠檬班"}, {"status":0,"code":"20110","data...)</span>
+                <span class="method-start">3171 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(3, 1, {"mobilephone":"13999999999","pwd":"","regname":"柠檬班"}, {"status":0,"code":"20103","data":null...)</span>
+                <span class="method-start">3287 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(4, 1, {"mobilephone":"","pwd":"","regname":"柠檬班"}, {"status":0,"code":"20103","data":null,"msg":"手机号...)</span>
+                <span class="method-start">3317 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(5, 1, {"mobilephone":"135","pwd":"123456","regname":"柠檬班"}, {"status":0,"code":"20109","data":null,"...)</span>
+                <span class="method-start">3340 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(6, 1, {"mobilephone":"13999999999","pwd":"123","regname":"柠檬班"}, {"status":0,"code":"20108","data":n...)</span>
+                <span class="method-start">3366 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(7, 2, {"mobilephone":"13999999999","pwd":"123456"}, {"status":1,"code":"10001","data":null,"msg":"登录...)</span>
+                <span class="method-start">3388 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(8, 2, {"mobilephone":"13999999999","pwd":""}, {"status":0,"code":"20103","data":null,"msg":"密码不能为空"}...)</span>
+                <span class="method-start">3420 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">f(9, 2, {"mobilephone":"","pwd":"123456"}, {"status":0,"code":"20103",data:null,"msg":"手机号不能为空"}, , )</span>
+                <span class="method-start">3446 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">f(10, 2, {"mobilephone":"13517315569","pwd":"123456"}, {"status":0,"code":"20111",data:null,"msg":"用户名...)</span>
+                <span class="method-start">3480 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">f(11, 2, {"mobilephone":"13999999999","pwd":"1234567"}, {"status":0,"code":"20111",data:null,"msg":"用户...)</span>
+                <span class="method-start">3516 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(12, 3, {"mobilephone":"13888880002","amount":"100"}, {"status":0,"code":"20104","data":null,"msg":"此...)</span>
+                <span class="method-start">3559 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(13, 3, {"mobilephone":"13999999999","amount":"-100"}, {"status":0,"code":"20117","data":null,"msg":"...)</span>
+                <span class="method-start">3589 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">f(14, 3, {"mobilephone":"13999999999","amount":"100"}, {"status":1,"code":"10001","data":{"id":80,"reg...)</span>
+                <span class="method-start">3617 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(15, 3, {"mobilephone":"138888","amount":"100"}, {"status":0,"code":"20109","data":null,"msg":"手机号码格式...)</span>
+                <span class="method-start">3887 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(16, 3, {"mobilephone":"13999999999","amount":"abc"}, {"status":0,"code":"20118","data":null,"msg":"请...)</span>
+                <span class="method-start">3911 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(17, 4, {"mobilephone":"13999999999","amount":"-100"}, {"status":0,"code":"20117","data":null,"msg":"...)</span>
+                <span class="method-start">3944 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(18, 4, {"mobilephone":"1388888000","amount":"100"}, {"status":0,"code":"20109","data":null,"msg":"手机...)</span>
+                <span class="method-start">3972 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">f(19, 4, {"mobilephone":"13999999999","amount":"10000"}, {"status":0,"code":"20119","data":null,"msg":...)</span>
+                <span class="method-start">3998 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">f(20, 4, {"mobilephone":"13999999999","amount":"0"}, {"status":0,"code":"20117","data":null,"msg":"请输入...)</span>
+                <span class="method-start">4025 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">f(21, 4, {"mobilephone":"13999999999","amount":"100"}, {"status":1,"code":"10001","data":null,"msg":"提...)</span>
+                <span class="method-start">4059 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(22, 7, {"memberId":"1","title":"测试新增项目","loanRate":"12","loanTerm":"3","loanDateType":"2","repaymemt...)</span>
+                <span class="method-start">4086 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(23, 8, {"id":"1","status":"4"}, {"status":1,"code":"10001","data":null,"msg":"更新状态成功：竞标开始，当前标为竞标中状态"...)</span>
+                <span class="method-start">4124 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(24, 6, {"memberId":"1","password":"123456","loanId":"1","amount":"100"}, {"status":1,"code":"10001",...)</span>
+                <span class="method-start">4238 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(25, 6, {"memberId":"1","password":"123456","loanId":"10000","amount":"100000"}, {"status":0,"code":"...)</span>
+                <span class="method-start">4463 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(26, 10, {"id":"1"}, {"status":1,"code":"20405","data":null,"msg":"该项目不在核保审批或终审状态，无法生成回款计划！"}, , [{"n...)</span>
+                <span class="method-start">4616 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(27, 8, {"id":"1","status":"5"}, {"status":1,"code":"10001","data":null,"msg":"更新状态成功：当前标为核保审批状态"}, ,...)</span>
+                <span class="method-start">4730 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">f(28, 10, {"id":"1"}, {"status":1,"code":"10001","data":[{"id":null,"investId":"1","createTime":"2018-...)</span>
+                <span class="method-start">4859 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-suite after">
+                <span class="method-name">afterSuit</span>
+                <span class="method-start">5207 ms</span>
+              </div> <!-- configuration-suite after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

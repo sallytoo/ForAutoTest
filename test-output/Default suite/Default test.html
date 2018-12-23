@@ -1,0 +1,786 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>19/9/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Dec 13 12:00:30 CST 2018</td>
+</tr>
+<tr><td>Total time:</td><td>6 seconds (6277 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 1, 1, {"mobilephone":"13999999999","pwd":"123456","regname":"aabbcc"}, {"status":1,"code":"10001","data":null,"msg":"注册成功"}, [{"no":"1","sql":"select count(*) as totalNum from member where mobilephone='13999999999'","expectedResultList":[{"totalNum":"0"}]}], [{"no":"1","sql":"select count(*) as totalNum from member where mobilephone='13999999999'","expectedResultList":[{"totalNum":"1"}]},{"no":"2","sql":"select LeaveAmount,Type from member where mobilephone='13999999999'","expectedResultList":[{"LeaveAmount":"0.00","Type":"1"}]}]</td>
+<td><div><pre>java.lang.AssertionError: expected [{&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;注册成功&quot;}] but found [{&quot;status&quot;:0,&quot;code&quot;:&quot;20110&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;手机号码已被注册&quot;}]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.lemon.api.auto.testCase.AllTestCase.f(AllTestCase.java:125)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div><a href='#' onClick='toggleBox("stack-trace839998248", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace839998248'><pre>java.lang.AssertionError: expected [{&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;注册成功&quot;}] but found [{&quot;status&quot;:0,&quot;code&quot;:&quot;20110&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;手机号码已被注册&quot;}]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.lemon.api.auto.testCase.AllTestCase.f(AllTestCase.java:125)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>1</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 9, 2, {"mobilephone":"","pwd":"123456"}, {"status":0,"code":"20103",data:null,"msg":"手机号不能为空"}, , </td>
+<td><div><pre>java.lang.AssertionError: expected [{&quot;status&quot;:0,&quot;code&quot;:&quot;20103&quot;,data:null,&quot;msg&quot;:&quot;手机号不能为空&quot;}] but found [{&quot;status&quot;:0,&quot;code&quot;:&quot;20103&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;手机号不能为空&quot;}]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.lemon.api.auto.testCase.AllTestCase.f(AllTestCase.java:125)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div><a href='#' onClick='toggleBox("stack-trace331122245", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace331122245'><pre>java.lang.AssertionError: expected [{&quot;status&quot;:0,&quot;code&quot;:&quot;20103&quot;,data:null,&quot;msg&quot;:&quot;手机号不能为空&quot;}] but found [{&quot;status&quot;:0,&quot;code&quot;:&quot;20103&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;手机号不能为空&quot;}]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.lemon.api.auto.testCase.AllTestCase.f(AllTestCase.java:125)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>0</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 10, 2, {"mobilephone":"13517315569","pwd":"123456"}, {"status":0,"code":"20111",data:null,"msg":"用户名或密码错误"}, , </td>
+<td><div><pre>java.lang.AssertionError: expected [{&quot;status&quot;:0,&quot;code&quot;:&quot;20111&quot;,data:null,&quot;msg&quot;:&quot;用户名或密码错误&quot;}] but found [{&quot;status&quot;:0,&quot;code&quot;:&quot;20111&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;用户名或密码错误&quot;}]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.lemon.api.auto.testCase.AllTestCase.f(AllTestCase.java:125)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1842853283", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1842853283'><pre>java.lang.AssertionError: expected [{&quot;status&quot;:0,&quot;code&quot;:&quot;20111&quot;,data:null,&quot;msg&quot;:&quot;用户名或密码错误&quot;}] but found [{&quot;status&quot;:0,&quot;code&quot;:&quot;20111&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;用户名或密码错误&quot;}]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.lemon.api.auto.testCase.AllTestCase.f(AllTestCase.java:125)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>0</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 11, 2, {"mobilephone":"13999999999","pwd":"1234567"}, {"status":0,"code":"20111",data:null,"msg":"用户名或密码错误"}, , </td>
+<td><div><pre>java.lang.AssertionError: expected [{&quot;status&quot;:0,&quot;code&quot;:&quot;20111&quot;,data:null,&quot;msg&quot;:&quot;用户名或密码错误&quot;}] but found [{&quot;status&quot;:0,&quot;code&quot;:&quot;20111&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;用户名或密码错误&quot;}]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.lemon.api.auto.testCase.AllTestCase.f(AllTestCase.java:125)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1595938139", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1595938139'><pre>java.lang.AssertionError: expected [{&quot;status&quot;:0,&quot;code&quot;:&quot;20111&quot;,data:null,&quot;msg&quot;:&quot;用户名或密码错误&quot;}] but found [{&quot;status&quot;:0,&quot;code&quot;:&quot;20111&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;用户名或密码错误&quot;}]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.lemon.api.auto.testCase.AllTestCase.f(AllTestCase.java:125)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>0</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 14, 3, {"mobilephone":"13999999999","amount":"100"}, {"status":1,"code":"10001","data":{"id":80,"regname":"tom","pwd":"E10ADC3949BA59ABBE56E057F20F883E","mobilephone":"13999999999","leaveamount":"10000.00","type":"1","regtime":"2018-04-26 14:42:36.0"},"msg":"充值成功"}, [{"no":"1","sql":"select LeaveAmount from member where MobilePhone='13999999999'","expectedResult":[{"LeaveAmount":"0.00"}]}], [{"no":"1","sql":"select LeaveAmount from member where MobilePhone='13999999999'","expectedResult":[{"LeaveAmount":"10000.00"}]}]</td>
+<td><div><pre>java.lang.AssertionError: expected [{&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:{&quot;id&quot;:80,&quot;regname&quot;:&quot;tom&quot;,&quot;pwd&quot;:&quot;E10ADC3949BA59ABBE56E057F20F883E&quot;,&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;leaveamount&quot;:&quot;10000.00&quot;,&quot;type&quot;:&quot;1&quot;,&quot;regtime&quot;:&quot;2018-04-26 14:42:36.0&quot;},&quot;msg&quot;:&quot;充值成功&quot;}] but found [{&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:{&quot;id&quot;:1,&quot;regname&quot;:&quot;aabbcc&quot;,&quot;pwd&quot;:&quot;E10ADC3949BA59ABBE56E057F20F883E&quot;,&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;leaveamount&quot;:&quot;-800.00&quot;,&quot;type&quot;:&quot;1&quot;,&quot;regtime&quot;:&quot;2018-12-11 22:55:41.0&quot;},&quot;msg&quot;:&quot;充值成功&quot;}]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.lemon.api.auto.testCase.AllTestCase.f(AllTestCase.java:125)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div><a href='#' onClick='toggleBox("stack-trace551016187", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace551016187'><pre>java.lang.AssertionError: expected [{&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:{&quot;id&quot;:80,&quot;regname&quot;:&quot;tom&quot;,&quot;pwd&quot;:&quot;E10ADC3949BA59ABBE56E057F20F883E&quot;,&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;leaveamount&quot;:&quot;10000.00&quot;,&quot;type&quot;:&quot;1&quot;,&quot;regtime&quot;:&quot;2018-04-26 14:42:36.0&quot;},&quot;msg&quot;:&quot;充值成功&quot;}] but found [{&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:{&quot;id&quot;:1,&quot;regname&quot;:&quot;aabbcc&quot;,&quot;pwd&quot;:&quot;E10ADC3949BA59ABBE56E057F20F883E&quot;,&quot;mobilephone&quot;:&quot;13999999999&quot;,&quot;leaveamount&quot;:&quot;-800.00&quot;,&quot;type&quot;:&quot;1&quot;,&quot;regtime&quot;:&quot;2018-12-11 22:55:41.0&quot;},&quot;msg&quot;:&quot;充值成功&quot;}]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.lemon.api.auto.testCase.AllTestCase.f(AllTestCase.java:125)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>0</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 19, 4, {"mobilephone":"13999999999","amount":"10000"}, {"status":0,"code":"20119","data":null,"msg":"余额不足，请修改提现额度"}, , </td>
+<td><div><pre>java.lang.AssertionError: expected [{&quot;status&quot;:0,&quot;code&quot;:&quot;20119&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;余额不足，请修改提现额度&quot;}] but found [{&quot;status&quot;:1,&quot;code&quot;:&quot;20119&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;余额不足，请修改提现额度&quot;}]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.lemon.api.auto.testCase.AllTestCase.f(AllTestCase.java:125)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1703696921", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1703696921'><pre>java.lang.AssertionError: expected [{&quot;status&quot;:0,&quot;code&quot;:&quot;20119&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;余额不足，请修改提现额度&quot;}] but found [{&quot;status&quot;:1,&quot;code&quot;:&quot;20119&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;余额不足，请修改提现额度&quot;}]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.lemon.api.auto.testCase.AllTestCase.f(AllTestCase.java:125)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>0</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 20, 4, {"mobilephone":"13999999999","amount":"0"}, {"status":0,"code":"20117","data":null,"msg":"请输入范围在0到50万之间的正数金额"}, , </td>
+<td><div><pre>java.lang.AssertionError: expected [{&quot;status&quot;:0,&quot;code&quot;:&quot;20117&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;请输入范围在0到50万之间的正数金额&quot;}] but found [{&quot;status&quot;:1,&quot;code&quot;:&quot;20119&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;余额不足，请修改提现额度&quot;}]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.lemon.api.auto.testCase.AllTestCase.f(AllTestCase.java:125)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1168924571", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1168924571'><pre>java.lang.AssertionError: expected [{&quot;status&quot;:0,&quot;code&quot;:&quot;20117&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;请输入范围在0到50万之间的正数金额&quot;}] but found [{&quot;status&quot;:1,&quot;code&quot;:&quot;20119&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;余额不足，请修改提现额度&quot;}]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.lemon.api.auto.testCase.AllTestCase.f(AllTestCase.java:125)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>0</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 21, 4, {"mobilephone":"13999999999","amount":"100"}, {"status":1,"code":"10001","data":null,"msg":"提现成功"}, , </td>
+<td><div><pre>java.lang.AssertionError: expected [{&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;提现成功&quot;}] but found [{&quot;status&quot;:1,&quot;code&quot;:&quot;20119&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;余额不足，请修改提现额度&quot;}]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.lemon.api.auto.testCase.AllTestCase.f(AllTestCase.java:125)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1042307502", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1042307502'><pre>java.lang.AssertionError: expected [{&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;提现成功&quot;}] but found [{&quot;status&quot;:1,&quot;code&quot;:&quot;20119&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;余额不足，请修改提现额度&quot;}]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.lemon.api.auto.testCase.AllTestCase.f(AllTestCase.java:125)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>0</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 28, 10, {"id":"1"}, {"status":1,"code":"10001","data":[{"id":null,"investId":"1","createTime":"2018-04-27 12:24:01","terms":"1","unfinishedInterest":"1.0","unfinishedPrincipal":"0","repaymentDate":"2018-05-27 12:24:01","actualRepaymentDate":null,"status":"0"},{"id":null,"investId":"1","createTime":"2018-04-27 12:24:01","terms":"2","unfinishedInterest":"1.0","unfinishedPrincipal":"0","repaymentDate":"2018-06-27 12:24:01","actualRepaymentDate":null,"status":"0"},{"id":null,"investId":"1","createTime":"2018-04-27 12:24:01","terms":"3","unfinishedInterest":"1.0","unfinishedPrincipal":"100.00","repaymentDate":"2018-07-27 12:24:01","actualRepaymentDate":null,"status":"0"}],"msg":"生成回款计划成功"}, [{"no":"1","sql":"select count(1) as totalNum from repayment where InvestId=1","expectedResult":[{"totalNum":"0"}]}], [{"no":"1","sql":"select count(1) as totalNum from repayment where InvestId=1","expectedResult":[{"totalNum":"3"}]},{"no":"2","sql":"select Terms,UnfinishedInterest,UnfinishedPrincipal,`Status` from repayment where InvestId=1","expectedResult":[{"Terms":"1","UnfinishedInterest":"1.00","UnfinishedPrincipal":"0.00","Status":"0"},{"Terms":"2","UnfinishedInterest":"1.00","UnfinishedPrincipal":"0.00","Status":"0"},{"Terms":"3","UnfinishedInterest":"1.00","UnfinishedPrincipal":"100.00","Status":"0"}]}]</td>
+<td><div><pre>java.lang.AssertionError: expected [{&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:[{&quot;id&quot;:null,&quot;investId&quot;:&quot;1&quot;,&quot;createTime&quot;:&quot;2018-04-27 12:24:01&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2018-05-27 12:24:01&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;1&quot;,&quot;createTime&quot;:&quot;2018-04-27 12:24:01&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2018-06-27 12:24:01&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;1&quot;,&quot;createTime&quot;:&quot;2018-04-27 12:24:01&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2018-07-27 12:24:01&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;}],&quot;msg&quot;:&quot;生成回款计划成功&quot;}] but found [{&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:[{&quot;id&quot;:null,&quot;investId&quot;:&quot;13&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;13&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;13&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;12&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;12&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;12&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;11&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;11&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;11&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;10&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;10&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;10&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;9&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;9&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;9&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;8&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;8&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;8&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;7&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;7&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;7&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;6&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;6&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;6&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;5&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;5&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;5&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;4&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;4&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;4&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;3&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;3&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;3&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;2&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;2&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;2&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;1&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;1&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;1&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;}],&quot;msg&quot;:&quot;生成回款计划成功&quot;}]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.lemon.api.auto.testCase.AllTestCase.f(AllTestCase.java:125)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div><a href='#' onClick='toggleBox("stack-trace348055829", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace348055829'><pre>java.lang.AssertionError: expected [{&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:[{&quot;id&quot;:null,&quot;investId&quot;:&quot;1&quot;,&quot;createTime&quot;:&quot;2018-04-27 12:24:01&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2018-05-27 12:24:01&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;1&quot;,&quot;createTime&quot;:&quot;2018-04-27 12:24:01&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2018-06-27 12:24:01&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;1&quot;,&quot;createTime&quot;:&quot;2018-04-27 12:24:01&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2018-07-27 12:24:01&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;}],&quot;msg&quot;:&quot;生成回款计划成功&quot;}] but found [{&quot;status&quot;:1,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:[{&quot;id&quot;:null,&quot;investId&quot;:&quot;13&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;13&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;13&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;12&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;12&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;12&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;11&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;11&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;11&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;10&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;10&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;10&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;9&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;9&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;9&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;8&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;8&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;8&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;7&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;7&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;7&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;6&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;6&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;6&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;5&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;5&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;5&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;4&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;4&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;4&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;3&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;3&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;3&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;2&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;2&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;2&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;1&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;1&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-01-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;1&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;2&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;0&quot;,&quot;repaymentDate&quot;:&quot;2019-02-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;},{&quot;id&quot;:null,&quot;investId&quot;:&quot;1&quot;,&quot;createTime&quot;:&quot;2018-12-13 12:00:36&quot;,&quot;terms&quot;:&quot;3&quot;,&quot;unfinishedInterest&quot;:&quot;1.0&quot;,&quot;unfinishedPrincipal&quot;:&quot;100.00&quot;,&quot;repaymentDate&quot;:&quot;2019-03-13 12:00:36&quot;,&quot;actualRepaymentDate&quot;:null,&quot;status&quot;:&quot;0&quot;}],&quot;msg&quot;:&quot;生成回款计划成功&quot;}]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at com.lemon.api.auto.testCase.AllTestCase.f(AllTestCase.java:125)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>0</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 2, 1, {"mobilephone":"13999999999","pwd":"123456","regname":"柠檬班"}, {"status":0,"code":"20110","data":null,"msg":"手机号码已被注册"}, [{"no":"1","sql":"select count(*) as totalNum from member where mobilephone='13999999999'","expectedResultList":[{"totalNum":"1"}]}], </td>
+<td></td>
+<td>0</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 3, 1, {"mobilephone":"13999999999","pwd":"","regname":"柠檬班"}, {"status":0,"code":"20103","data":null,"msg":"密码不能为空"}, , </td>
+<td></td>
+<td>0</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 4, 1, {"mobilephone":"","pwd":"","regname":"柠檬班"}, {"status":0,"code":"20103","data":null,"msg":"手机号不能为空"}, , </td>
+<td></td>
+<td>0</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 5, 1, {"mobilephone":"135","pwd":"123456","regname":"柠檬班"}, {"status":0,"code":"20109","data":null,"msg":"手机号码格式不正确"}, , </td>
+<td></td>
+<td>0</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 6, 1, {"mobilephone":"13999999999","pwd":"123","regname":"柠檬班"}, {"status":0,"code":"20108","data":null,"msg":"密码长度必须为6~18"}, , </td>
+<td></td>
+<td>0</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 7, 2, {"mobilephone":"13999999999","pwd":"123456"}, {"status":1,"code":"10001","data":null,"msg":"登录成功"}, , </td>
+<td></td>
+<td>0</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 8, 2, {"mobilephone":"13999999999","pwd":""}, {"status":0,"code":"20103","data":null,"msg":"密码不能为空"}, , </td>
+<td></td>
+<td>0</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 12, 3, {"mobilephone":"13888880002","amount":"100"}, {"status":0,"code":"20104","data":null,"msg":"此手机号对应的会员不存在"}, , </td>
+<td></td>
+<td>0</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 13, 3, {"mobilephone":"13999999999","amount":"-100"}, {"status":0,"code":"20117","data":null,"msg":"请输入范围在0到50万之间的正数金额"}, , </td>
+<td></td>
+<td>0</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 15, 3, {"mobilephone":"138888","amount":"100"}, {"status":0,"code":"20109","data":null,"msg":"手机号码格式不正确"}, , </td>
+<td></td>
+<td>1</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 16, 3, {"mobilephone":"13999999999","amount":"abc"}, {"status":0,"code":"20118","data":null,"msg":"请输入数字"}, , </td>
+<td></td>
+<td>0</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 17, 4, {"mobilephone":"13999999999","amount":"-100"}, {"status":0,"code":"20117","data":null,"msg":"请输入范围在0到50万之间的正数金额"}, , </td>
+<td></td>
+<td>0</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 18, 4, {"mobilephone":"1388888000","amount":"100"}, {"status":0,"code":"20109","data":null,"msg":"手机号码格式不正确"}, , </td>
+<td></td>
+<td>0</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 22, 7, {"memberId":"1","title":"测试新增项目","loanRate":"12","loanTerm":"3","loanDateType":"2","repaymemtWay":"11","biddingDays":"5","amount":"100000"}, {"status":1,"code":"10001","data":null,"msg":"加标成功"}, , </td>
+<td></td>
+<td>0</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 23, 8, {"id":"1","status":"4"}, {"status":1,"code":"10001","data":null,"msg":"更新状态成功：竞标开始，当前标为竞标中状态"}, , [{"no":"1","sql":"select `Status` from loan where Id=1","expectedResult":[{"Status":"4"}]}]</td>
+<td></td>
+<td>0</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 24, 6, {"memberId":"1","password":"123456","loanId":"1","amount":"100"}, {"status":1,"code":"10001","data":null,"msg":"竞标成功"}, , [{"no":"1","sql":"select MemberID,LoanId,Amount,IsValid from invest order by id desc limit 1","expectedResult":[{"MemberID":"1","LoanId":"1","Amount":"100.00","IsValid":"1"}]},{"no":"2","sql":"select LeaveAmount from member where MobilePhone='13999999999'","expectedResult":[{"LeaveAmount":"9900.00"}]}]</td>
+<td></td>
+<td>0</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 25, 6, {"memberId":"1","password":"123456","loanId":"10000","amount":"100000"}, {"status":0,"code":"11009","data":null,"msg":"不存在该标的"}, , [{"no":"1","sql":"select count(1) as loanNum from loan where id=10000","expectedResult":[{"loanNum":"0"}]}]</td>
+<td></td>
+<td>0</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 26, 10, {"id":"1"}, {"status":1,"code":"20405","data":null,"msg":"该项目不在核保审批或终审状态，无法生成回款计划！"}, , [{"no":"1","sql":"select count(1) as loanNum from loan where id=1 and `Status`=5","expectedResult":[{"loanNum":"0"}]}]</td>
+<td></td>
+<td>0</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+<tr>
+<td title='com.lemon.api.auto.testCase.AllTestCase.f()'><b>f</b><br>Test class: com.lemon.api.auto.testCase.AllTestCase<br>Parameters: 27, 8, {"id":"1","status":"5"}, {"status":1,"code":"10001","data":null,"msg":"更新状态成功：当前标为核保审批状态"}, , [{"no":"1","sql":"select `Status` from loan where Id=1","expectedResult":[{"Status":"5"}]}]</td>
+<td></td>
+<td>0</td>
+<td>com.lemon.api.auto.testCase.AllTestCase@66048bfd</td></tr>
+</table><p>
+</body>
+</html>
