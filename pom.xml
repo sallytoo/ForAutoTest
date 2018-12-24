@@ -10,7 +10,6 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.8.8</version>
-			<scope>test</scope>
 			<!-- <scope>test</scope> -->
 		</dependency>
 		<!-- 集成httpClient-4.5.2依赖 -->
