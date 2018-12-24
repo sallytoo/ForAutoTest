@@ -5,6 +5,7 @@
 	<artifactId>phoenix_api_atuo_8</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<dependencies>
+		
 		<!-- 集成testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
